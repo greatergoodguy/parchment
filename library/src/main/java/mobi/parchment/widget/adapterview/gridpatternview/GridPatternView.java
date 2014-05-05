@@ -64,4 +64,12 @@ public class GridPatternView<ADAPTER extends Adapter> extends AbstractAdapterVie
         mGridPatternLayoutManager.addGridPatternGroupDefinition(gridPatternGroupDefinition);
     }
 
+    public void add(final List<GridPatternItemDefinition> gridPatternItemDefinitions) {
+    	addGridPatternGroupDefinition(gridPatternItemDefinitions);
+    }
+    
+    public void clear() {
+    	mGridPatternLayoutManager.clearGridPatternGroupDefinition();
+    }
+    
 }

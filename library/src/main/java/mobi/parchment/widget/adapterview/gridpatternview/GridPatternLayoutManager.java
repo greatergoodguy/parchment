@@ -25,6 +25,11 @@ public class GridPatternLayoutManager extends LayoutManager<GridPatternGroup> {
         mGridPatternLayoutManagerAttributes = (GridPatternLayoutManagerAttributes) layoutManagerAttributes;
     }
 
+    public void clearGridPatternGroupDefinition() {
+    	mGridPatternGroupDefinitions.clear();
+        mNumberOfGridItemsPerRepetition = 0;
+    }
+    
     public void addGridPatternGroupDefinition(final GridPatternGroupDefinition gridPatternGroupDefinition) {
         if (gridPatternGroupDefinition == null) {
             return;

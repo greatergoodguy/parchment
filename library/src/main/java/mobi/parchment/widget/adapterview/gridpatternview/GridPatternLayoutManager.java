@@ -6,6 +6,7 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 import java.util.List;
 
+import mobi.parchment.widget.adapterview.AdapterViewHandler;
 import mobi.parchment.widget.adapterview.AdapterViewManager;
 import mobi.parchment.widget.adapterview.LayoutManager;
 import mobi.parchment.widget.adapterview.LayoutManagerAttributes;
@@ -28,6 +29,9 @@ public class GridPatternLayoutManager extends LayoutManager<GridPatternGroup> {
     public void clearGridPatternGroupDefinition() {
     	mGridPatternGroupDefinitions.clear();
         mNumberOfGridItemsPerRepetition = 0;
+        final AdapterViewHandler adapterViewHandler = (AdapterViewHandler) mViewGroup;
+		recycleCells(adapterViewHandler);
+		mAdapterViewManager.clear();
     }
     
     public void addGridPatternGroupDefinition(final GridPatternGroupDefinition gridPatternGroupDefinition) {

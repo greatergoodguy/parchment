@@ -153,5 +153,13 @@ public class AdapterViewManager {
         mDataSetObserverManager.unregisterDataSetObserver(dataSetObserver);
     }
 
-
+    public void clear() {
+	    mViewIdMap.clear();
+	    mViewTypeMap.clear();
+	    mIdViewMap.clear();
+	    for (Queue<View> queue : mViews){
+	    	queue.clear();
+	    }
+	}
+    
 }

@@ -902,7 +902,7 @@ public abstract class LayoutManager<Cell> extends AdapterViewDataSetObserver {
 
     }
 
-    private void recycleCells(final AdapterViewHandler adapterViewHandler) {
+    protected void recycleCells(final AdapterViewHandler adapterViewHandler) {
         for (final Cell cell : mCells) {
             final List<View> views = getViews(cell);
             for (final View view : views) {
